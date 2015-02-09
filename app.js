@@ -21,4 +21,5 @@ app.service("tutorialsService", function($http, $q)
   {
     $scope.tutorial = data;
     console.log($scope.tutorial);
+  });
 })

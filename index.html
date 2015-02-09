@@ -12,6 +12,22 @@
 
 <div class="mainContainer" data-ng-app="TutorialsApp">
 <div data-ng-controller="tutorialsCtrl">
+<table class="tabel table-striped">
+        <thead>
+                <th>Link</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Author</th>
+        </thead>
+        <tbody>
+                <tr data-ng-repeat="informative in informatives">
+                        <td>{{informative.url}}</td>
+                        <td>{{informative.title}}</td>
+                        <td>{{informative.image}}</td>
+                        <td>{{informative.author}}</td>
+                </tr>
+        </tbody>
+</table>
 </div>
 </div>
 </body>

@@ -1,4 +1,4 @@
-var app = angular.module("TutorialsApp", []);
+var app = angular.module("TutorialsApp");
 
 app.service("tutorialsService", function($http, $q)
 {

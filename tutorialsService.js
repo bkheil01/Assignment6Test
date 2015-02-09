@@ -8,7 +8,7 @@ app.service("tutorialsService", function($http, $q)
     deferred.resolve(data);
   });
 
-  this.getTutorials = function ()
+  this.getInformatives = function ()
   {
     return deferred.promise;
   }
@@ -16,7 +16,7 @@ app.service("tutorialsService", function($http, $q)
 
 .controller("tutorialsCtrl", function ($scope, tutorialsService)
 {
-  var promise = tutorialsService.getTutorials();
+  var promise = tutorialsService.getInformatives();
   promise.then(function (data)
   {
     $scope.informatives = data.data;

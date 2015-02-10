@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <script type="text/javascript">
-                function ajax_get_json() {
-                        var hr = new XMLHttpRequest();
-                        hr.open("GET", "tutorials.json", true);
-                        hr.setRequestHeader("Content-type", "application/json", true);
-                        hr.onreadystatechange = function() {
-                                if(hr.readyState == 4 && hr.status == 200) {
-                                        var data = JSON.parse(hr.responseText);
-                                        var results = document.getElementById("results");
-                                        results.innerHTML = "";
-                                        for(var obj in data) {
-                                                results.innerHTML += data[obj].image;
-                                        }
-                                }
-                        }
-                        hr.send(null);
-                }
-        </script>
-       
        	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
@@ -40,7 +21,7 @@
                 <tr data-ng-repeat="informative in informatives | filter:search">
                         <td>{{informative.url}}</td>
                         <td>{{informative.title}}</td>
-                        <td>{{informative.image}}</td>
+                        <td>{{JSON.parse(informative.image)}}</td>
                         <td>{{informative.author}}</td>
                 </tr>
         </tbody>

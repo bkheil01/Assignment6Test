@@ -11,17 +11,17 @@
 <div data-ng-controller="tutorialsCtrl">
 <table class="table table-striped">
        <thead>
-             <th>Link</th>
-                <th>Title</th>
                 <th>Image</th>
+                <th>Title</th>
                 <th>Author</th>
+                <th>Link</th>
         </thead>
         <tbody>
                 <tr data-ng-repeat="informative in informatives | filter:search">
-                        <td>{{informative.url}}</td>
-                        <td>{{informative.title}}</td>
                         <td>{{informative.image}}</td>
+                        <td>{{informative.title}}</td>
                         <td>{{informative.author}}</td>
+                        <td>{{informative.url}}</td>
                 </tr>
         </tbody>
 </table>

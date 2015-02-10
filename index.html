@@ -20,7 +20,7 @@
                 <tr data-ng-repeat="informative in informatives | filter:search">
                         <td>{{informative.url}}</td>
                         <td>{{informative.title}}</td>
-                        <td>{{jQuery.parseJSON(informative.image)}}</td>
+                        <td>jQuery.parseJSON({{informative.image}})</td>
                         <td>{{informative.author}}</td>
                 </tr>
         </tbody>
